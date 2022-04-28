@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         var tip = tipPercentage * cost
         val roundUp = binding.roundUpSwitch.isChecked
         if (roundUp) {
-            val tip = kotlin.math.ceil(tip)
+            tip = kotlin.math.ceil(tip)
         }
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
         binding.tipResult.text = formattedTip
